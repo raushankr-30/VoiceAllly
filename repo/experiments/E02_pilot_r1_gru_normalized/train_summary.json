@@ -1,0 +1,8 @@
+{
+  "best_epoch": 0,
+  "best_val_macro_f1": 0.0,
+  "num_parameters": 74373,
+  "num_classes": 5,
+  "input_dim": 126,
+  "training_time_seconds": 2.23698353767395
+}
