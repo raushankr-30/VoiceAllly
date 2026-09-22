@@ -1,0 +1,5 @@
+Split mode: pilot_video_level_stratified; NOT signer-independent; NOT paper result
+
+Signer overlap check: SKIPPED (no signer_col in mapping -- this split is not signer-independent; see SPLIT_MODE.txt)
+Duplicate file overlap (content hash): 0
+STATUS: PASS

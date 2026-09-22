@@ -1,0 +1,1 @@
+pilot_video_level_stratified; NOT signer-independent; NOT paper result
