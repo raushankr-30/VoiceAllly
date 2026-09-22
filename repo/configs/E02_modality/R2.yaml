@@ -1,0 +1,33 @@
+# Experiment 1 (spec section 14): landmark modality comparison.
+# Same model/optimizer/training budget/preprocessing across R1/R2/R3 --
+# only 'representation' changes. Model choice below (GRU) is a
+# placeholder default for a mid-sized RNN; change it in all three
+# R1/R2/R3 configs together (never just one) if a different fixed model
+# is chosen for this ablation.
+seed: 42
+
+vocabulary_csv: data/processed/vocabulary.csv
+train_csv: data/splits/train.csv
+val_csv: data/splits/validation.csv
+test_csv: data/splits/test.csv
+landmarks_dir: data/processed/landmarks_raw
+
+video_col: null   # fill from configs/column_mapping.yaml
+label_col: null   # fill from configs/column_mapping.yaml
+
+representation: R2
+feature_set: F1          # position only for this ablation -- feature set is Experiment 3, not varied here
+sequence_length: null    # fill via src/features/temporal.py::choose_sequence_length()
+
+model: gru
+model_kwargs:
+  hidden_dim: 128
+  num_layers: 1
+  dropout: 0.3
+  bidirectional: true
+
+batch_size: 16
+learning_rate: 0.001
+epochs: 60
+early_stopping_patience: 8
+num_workers: 2

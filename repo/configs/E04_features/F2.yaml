@@ -1,0 +1,31 @@
+# Experiment 3 (spec section 16): feature ablation (position / velocity /
+# acceleration). representation and model below MUST be updated to the
+# winners of Experiment 1 and Experiment 2 respectively -- currently
+# placeholders.
+seed: 42
+
+vocabulary_csv: data/processed/vocabulary.csv
+train_csv: data/splits/train.csv
+val_csv: data/splits/validation.csv
+test_csv: data/splits/test.csv
+landmarks_dir: data/processed/landmarks_raw
+
+video_col: null
+label_col: null
+
+representation: R2
+feature_set: F2
+sequence_length: null
+
+model: gru
+model_kwargs:
+  hidden_dim: 128
+  num_layers: 1
+  dropout: 0.3
+  bidirectional: true
+
+batch_size: 16
+learning_rate: 0.001
+epochs: 60
+early_stopping_patience: 8
+num_workers: 2

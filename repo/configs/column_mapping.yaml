@@ -1,0 +1,12 @@
+# Fill this in AFTER running:
+#   python src/data/audit_dataset.py --raw-dir data/raw
+# and reading research/RAW_SCHEMA_REPORT.md to see the *actual* CISLR
+# column names. Nothing below is assumed correct -- these are placeholders.
+
+primary_metadata_file: "local_manifest.csv"
+
+label_col: "gloss"
+video_path_col: "video_path"
+signer_col: null                # no reliable signer field is present in supplied metadata
+duration_col: "duration"
+fps_col: null                   # optional

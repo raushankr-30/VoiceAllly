@@ -1,0 +1,28 @@
+# Experiment 2 (spec section 15): temporal model comparison.
+# representation below MUST be updated to whichever R1/R2/R3 won on
+# VALIDATION macro-F1 in Experiment 1 -- currently a placeholder (R2).
+seed: 42
+
+vocabulary_csv: data/processed/vocabulary.csv
+train_csv: data/splits/train.csv
+val_csv: data/splits/validation.csv
+test_csv: data/splits/test.csv
+landmarks_dir: data/processed/landmarks_raw
+
+video_col: null
+label_col: null
+
+representation: R2
+feature_set: F1
+sequence_length: null
+
+model: baseline_mlp
+model_kwargs:
+  hidden_dim: 128
+  dropout: 0.3
+
+batch_size: 16
+learning_rate: 0.001
+epochs: 60
+early_stopping_patience: 8
+num_workers: 2

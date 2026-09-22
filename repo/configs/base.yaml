@@ -1,0 +1,24 @@
+# Shared defaults every experiment config inherits/overrides. Values here
+# are placeholders (0, TBD) where they genuinely depend on the real
+# dataset audit and must not be guessed -- see the comments.
+
+seed: 42
+
+vocabulary_csv: data/processed/vocabulary.csv
+train_csv: data/splits/train.csv
+val_csv: data/splits/validation.csv
+test_csv: data/splits/test.csv
+landmarks_dir: data/processed/landmarks_raw
+
+video_col: null   # copy from configs/column_mapping.yaml once filled in
+label_col: null   # copy from configs/column_mapping.yaml once filled in
+
+# TBD: set via src/features/temporal.py::choose_sequence_length() run against
+# the REAL extracted frame-count distribution (spec section 11). Do not guess.
+sequence_length: null
+
+batch_size: 16
+learning_rate: 0.001
+epochs: 60
+early_stopping_patience: 8
+num_workers: 2
