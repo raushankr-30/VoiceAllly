@@ -1,0 +1,6 @@
+class_id,label,number_of_videos,number_of_signers,selected,reason_if_excluded
+monday,monday,13,unavailable,True,
+thursday,thursday,11,unavailable,True,
+interest,interest,10,unavailable,True,
+friday,friday,9,unavailable,True,
+pencil,pencil,9,unavailable,True,
